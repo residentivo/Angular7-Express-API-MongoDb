@@ -3,6 +3,17 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Product = require('../models/Product.js');
 
+/* GET ALL BY TERM */
+// router.get('/SEARCH', function(req, res, next) {  
+//   var SeachTerm = req.query.Term;  
+//   if(SeachTerm == undefined) 
+//     SeachTerm = req.query.term ;      
+//   Hero.find({ name : { $regex: '.*' + SeachTerm + '.*' } }, function (err, person) {
+//     if (err) return handleError(err);           
+//     res.json(person);  
+//   });
+// });
+
 /* GET ALL PRODUCTS */
 router.get('/', function(req, res, next) {
   Product.find(function (err, products) {
